@@ -59,30 +59,6 @@ Here are typical columns you'd have in your dataset:
 | MonthlyIncome      | Numeric salary / wage                                       |
 | Other optional fields | Location, Manager, YearsAtCompany, etc.                |
 
-### Sample Power Query (M) transformations
-
-let
-    Source = Csv.Document(File.Contents("data/employees.csv"),[Delimiter=",", Columns=12, Encoding=1252, QuoteStyle=QuoteStyle.Csv]),
-    PromoteHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-    ChangedTypes = Table.TransformColumnTypes(PromoteHeaders,{
-        {"EmployeeID", type text},
-        {"HireDate", type date},
-        {"TerminationDate", type date},
-        {"MonthlyIncome", type number},
-        {"PerformanceRating", Int64.Type}
-    }),
-    // Create Tenure in years (if still active, use today’s date)
-    AddEndDate = Table.AddColumn(ChangedTypes, "EndDate", each if [Attrition] = "Yes" then [TerminationDate] else DateTime.Date(DateTime.LocalNow())),
-    AddTenureDays = Table.AddColumn(AddEndDate, "TenureDays", each Duration.Days([EndDate] - [HireDate])),
-    AddTenureYears = Table.AddColumn(AddTenureDays, "TenureYears", each Number.Round([TenureDays] / 365, 2)),
-    // Age Groups
-    AddAgeGroup = Table.AddColumn(AddTenureYears, "AgeGroup", each 
-        if [Age] <= 25 then "18-25" 
-        else if [Age] <= 35 then "26-35" 
-        else if [Age] <= 45 then "36-45" 
-        else "46+")
-in
-    AddAgeGroup
 ---
 
 ### Sample Dax Measures
