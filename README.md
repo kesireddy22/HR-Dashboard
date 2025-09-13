@@ -143,5 +143,3 @@ SUMMARIZE(
 - **Matrix / Table**: Lists employees with key metrics, allowing filtering and drill-down.  
 
 - **Slicers / Filters**: Interactive controls for Department, Job Role, Gender, Date Range, and Age Group.  
-
----
