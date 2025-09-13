@@ -106,4 +106,11 @@ AverageTenureYears = AVERAGE('Employees'[TenureYears])
 
 - **Matrix / Table**: Lists employees with key metrics, allowing filtering and drill-down.  
 
-- **Slicers / Filters**: Interactive controls for Department, Job Role, Gender, Date Range, and Age Group.  
+- **Slicers / Filters**: Interactive controls for Department, Job Role, Gender, Date Range, and Age Group.
+
+  # Dashboard designing
+Based on the received mock-ups, the team will start designing the visuals and creating measures as needed.
+![Dashboard Demo](![HR_Dashboard](https://github.com/user-attachments/assets/4e40f56a-b553-48a2-850f-b984cb6e855e)
+)
+
+ 
