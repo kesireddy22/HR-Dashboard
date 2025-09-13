@@ -87,20 +87,9 @@ DIVIDE(
 AverageTenureYears = AVERAGE('Employees'[TenureYears])
 
 -- Attrition Rate by Department (%)
-AttritionRateByDept = 
-VAR DeptTotal = CALCULATE(COUNTROWS('Employees'), ALLEXCEPT('Employees', 'Employees'[Department]))
-VAR DeptAttr = CALCULATE(COUNTROWS('Employees'), 'Employees'[Attrition] = "Yes", ALLEXCEPT('Employees', 'Employees'[Department]))
-RETURN
-    DIVIDE(DeptAttr, DeptTotal, 0) * 100
 
--- Trend of Attrition Over Time (Monthly)
-AttritionByMonth = 
-SUMMARIZE(
-    'Employees',
-    'Employees'[YearMonth],   -- assuming you have a YearMonth column (like YYYY-MM)
-    "AttritionCount", CALCULATE(COUNTROWS('Employees'), 'Employees'[Attrition] = "Yes"),
-    "TotalCount", COUNTROWS('Employees')
-)
+
+
  ---
 ### 📈 Visuals included
 
