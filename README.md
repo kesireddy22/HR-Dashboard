@@ -61,7 +61,6 @@ Here are typical columns you'd have in your dataset:
 
 ### Sample Power Query (M) transformations
 
-```m
 let
     Source = Csv.Document(File.Contents("data/employees.csv"),[Delimiter=",", Columns=12, Encoding=1252, QuoteStyle=QuoteStyle.Csv]),
     PromoteHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
@@ -126,8 +125,8 @@ SUMMARIZE(
     "AttritionCount", CALCULATE(COUNTROWS('Employees'), 'Employees'[Attrition] = "Yes"),
     "TotalCount", COUNTROWS('Employees')
 )
-
-## 📈 Visuals included
+ ---
+### 📈 Visuals included
 
 - **KPI Cards**: Display key HR metrics such as  
   - Total Employees  
