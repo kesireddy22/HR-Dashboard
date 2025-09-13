@@ -110,7 +110,6 @@ AverageTenureYears = AVERAGE('Employees'[TenureYears])
 
   # Dashboard designing
 Based on the received mock-ups, the team will start designing the visuals and creating measures as needed.
-![Dashboard Demo](![HR_Dashboard](https://github.com/user-attachments/assets/4e40f56a-b553-48a2-850f-b984cb6e855e)
-)
+![Dashboard Demo](HR_Dashboard.gifHR_Dashboard.gif)
 
  
