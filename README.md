@@ -127,55 +127,21 @@ SUMMARIZE(
     "TotalCount", COUNTROWS('Employees')
 )
 
-## 📊 Visuals included
+## 📈 Visuals included
 
-### 1. KPI Cards  
-Key metrics showing total employees, active employees, attrition rate, and average tenure.  
+- **KPI Cards**: Display key HR metrics such as  
+  - Total Employees  
+  - Attrition Rate  
+  - Average Tenure  
 
-![KPI Cards](reports/kpi_cards.png)
+- **Line / Area Chart**: Shows attrition trend over time (monthly / quarterly).  
 
----
+- **Bar Chart**: Highlights attrition count and attrition rate by Department and Job Role.  
 
-### 2. Attrition Trend Over Time  
-Line/area chart showing attrition by month.  
+- **Pie / Donut Charts**: Provides demographic breakdown of attrition by Age Group and Gender.  
 
-![Attrition Trend](reports/attrition_trend.png)
+- **Matrix / Table**: Lists employees with key metrics, allowing filtering and drill-down.  
 
----
-
-### 3. Attrition by Department  
-Bar chart visualizing department-wise attrition rate and counts.  
-
-![Attrition by Department](reports/attrition_by_department.png)
-
----
-
-### 4. Attrition by Age Group & Gender  
-Donut/Pie charts displaying breakdown of attrition by demographic categories.  
-
-![Age & Gender](reports/attrition_age_gender.png)
-
----
-
-### 5. Employee Table  
-Detailed table with employee-level drillthroughs.  
-
-![Employee Table](reports/employee_table.png)
-
----
-
-## 🗃 Data schema
-
-| Column name       | Description                       |
-|-------------------|-----------------------------------|
-| EmployeeID        | Unique identifier                 |
-| HireDate          | Date employee joined              |
-| TerminationDate   | Date employee left (if applicable)|
-| Attrition         | Yes / No                          |
-| Department        | Employee department               |
-| JobRole           | Employee job role                 |
-| Age               | Current age                       |
-| Gender            | Male / Female / Other             |
-| MonthlyIncome     | Monthly salary                    |
+- **Slicers / Filters**: Interactive controls for Department, Job Role, Gender, Date Range, and Age Group.  
 
 ---
