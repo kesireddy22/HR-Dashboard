@@ -127,16 +127,55 @@ SUMMARIZE(
     "TotalCount", COUNTROWS('Employees')
 )
 
-📈 Visuals included
+## 📊 Visuals included
 
-KPI cards: Total Employees, Attrition Rate, Avg. Tenure
+### 1. KPI Cards  
+Key metrics showing total employees, active employees, attrition rate, and average tenure.  
 
-Line / Area chart: Attrition trend over time (monthly / quarterly)
+![KPI Cards](reports/kpi_cards.png)
 
-Bar chart: Attrition count & rate by Department, JobRole
+---
 
-Pie / Donut charts: Attrition by AgeGroup, Gender
+### 2. Attrition Trend Over Time  
+Line/area chart showing attrition by month.  
 
-Matrix / Table: list of employees, maybe filterable, showing key metrics
+![Attrition Trend](reports/attrition_trend.png)
 
-Slicers / filters: Department, JobRole, Gender, Date range, AgeGroup
+---
+
+### 3. Attrition by Department  
+Bar chart visualizing department-wise attrition rate and counts.  
+
+![Attrition by Department](reports/attrition_by_department.png)
+
+---
+
+### 4. Attrition by Age Group & Gender  
+Donut/Pie charts displaying breakdown of attrition by demographic categories.  
+
+![Age & Gender](reports/attrition_age_gender.png)
+
+---
+
+### 5. Employee Table  
+Detailed table with employee-level drillthroughs.  
+
+![Employee Table](reports/employee_table.png)
+
+---
+
+## 🗃 Data schema
+
+| Column name       | Description                       |
+|-------------------|-----------------------------------|
+| EmployeeID        | Unique identifier                 |
+| HireDate          | Date employee joined              |
+| TerminationDate   | Date employee left (if applicable)|
+| Attrition         | Yes / No                          |
+| Department        | Employee department               |
+| JobRole           | Employee job role                 |
+| Age               | Current age                       |
+| Gender            | Male / Female / Other             |
+| MonthlyIncome     | Monthly salary                    |
+
+---
