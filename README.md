@@ -112,4 +112,15 @@ AverageTenureYears = AVERAGE('Employees'[TenureYears])
 Based on the received mock-ups, the team will start designing the visuals and creating measures as needed.
 ![HR Dashboard Demo](HR_Dashboard.gif)
 
+## ✅ Project Outcome
+
+- Built a **comprehensive HR Analytics Dashboard** to track employee demographics, attrition, and satisfaction.  
+- Identified **high-attrition departments, job roles, and age groups**, enabling data-driven retention strategies.  
+- Improved **decision-making** by highlighting at-risk employee segments and workforce patterns.  
+- Monitored **average tenure, attrition rate trends, and department-wise breakdowns** for better planning.  
+- Reduced manual reporting efforts through **automated, interactive Power BI visuals**.  
+- Provided actionable insights for **HR strategy, employee engagement, and workforce forecasting**.  
+- Created a foundation for future **predictive analytics** (e.g., attrition forecasting, risk factor analysis).  
+
+
  
